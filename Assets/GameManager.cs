@@ -11,9 +11,9 @@ public class GameManager : MonoBehaviour
     }
     void Start(){
         GameObject one = GameObject.FindGameObjectWithTag("1");
-        for(int i = 0; i < 5; i++){
-            for(int j = 0; i < 1; j++){
-                Vector3 position = new Vector3(j * 10, 0, i * 10);
+        for(int i = 0; i < 25; i++){
+            for(int j = 0; j < 25; j++){
+                Vector3 position = new Vector3(j, 0, i);
                 Instantiate(one, position, Quaternion.identity);
             }
         }
