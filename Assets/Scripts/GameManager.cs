@@ -56,6 +56,10 @@ public class GameManager : MonoBehaviour
         }
         return board;
     }
+
+    void GameOver(){
+
+    }
     void Start(){
         this.board = InitializeBoard();
     }
@@ -65,7 +69,13 @@ public class GameManager : MonoBehaviour
             RaycastHit hit;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if(Physics.Raycast(ray, out hit, 100f)){
-                hit.transform.gameObject.GetComponent<BlockLogic>().Reveal(board, objectBoard);
+                if(hit.transform.gameObject.tag == "bomb"){
+                    hit.transform.gameObject.GetComponent<bombLogic>().Reveal();
+                    GameOver();
+                } 
+                else{
+                    hit.transform.gameObject.GetComponent<BlockLogic>().Reveal(board, objectBoard);
+                }
             }
         } 
     }
