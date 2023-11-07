@@ -6,5 +6,9 @@ public class bombLogic : MonoBehaviour
 {
     public void Reveal(){
         transform.gameObject.SetActive(false);
+        GameOver();
+    }
+    void GameOver(){
+        FindObjectOfType<GameManager>().GameOver();
     }
 }
