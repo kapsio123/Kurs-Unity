@@ -242,7 +242,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &518162856
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1079,6 +1079,7 @@ MonoBehaviour:
   bomb: {fileID: 976140975056164960, guid: 8aa0659ed67ac1941aedaed8c6c8a7ec, type: 3}
   block: {fileID: 5540048240772709681, guid: 35cd5babb8f83f04cbe9706879cf13c9, type: 3}
   GameOverScreen: {fileID: 946566311}
+  WinScreen: {fileID: 518162855}
 --- !u!4 &1362546859
 Transform:
   m_ObjectHideFlags: 0
